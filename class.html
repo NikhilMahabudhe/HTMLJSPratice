@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function nikhil(){
+        var username = document.getElementById("username").value;
+        var error = document.getElementById("error");
+        if(username.length>5){
+          error.innerHTML="password is week".fontcolor("red");
+        }else{
+          error.innerHTML="password is strong".fontcolor("green");
+        }
+      }
+
+    </script>
+
+  </head>
+  <body>
+    <dl>
+      <dd>username</dd>
+      <dd><input type="text" onkeyup="nikhil()" id="username"></dd>
+      <dd id="error"></dd>
+    </dl>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>js practice</title>
+    <script>
+        function getcolour(colour){
+            document.getElementById("doit").style.color = `${colour}`;
+        };
+
+    </script>
+</head>
+<body>
+    <button onclick="getcolour('red')" value="red">red</button>
+    <button onclick="getcolour(this.value)"  value="green">green</button>
+    <button onclick="getcolour(this.value)" value="orange">orange</button>
+    <button onclick="getcolour(this.value)"  value="yellow">yellow</button>
+    <div id="doit">change the color</div>
+    
+</body>
+</html>

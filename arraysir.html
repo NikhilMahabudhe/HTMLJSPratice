@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Manipulation</title>
+        <script>
+            var categories = ["All","Electronics", "Footwear", "Fashion", "Men's Clothing"];
+            function bodyload(){
+                for(var category of categories)
+                {
+                    var li = document.createElement("li");
+                    li.innerHTML = `<input type="checkbox"> ${category}`;
+                    document.querySelector("ul").appendChild(li);
+                }
+            }
+        </script>
+        <style>
+            ul {
+                width: 200px;
+                border:2px solid black;
+                height: 50px;
+                overflow: auto;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body onload="bodyload()">
+        <h3>Categories List</h3>
+        <ul style="list-style: none;">
+
+        </ul>
+       
+    </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Manipulation</title>
+        <script>
+            var categories = ["All","Electronics", "Footwear", "Fashion", "Men's Clothing"];
+            function bodyload(){
+                for(var category of categories)
+                {
+                    var li = document.createElement("li");
+                    li.innerHTML = category;
+                    document.querySelector("ol").appendChild(li);
+
+                    var option = document.createElement("option");
+                    option.text = category;
+                    document.querySelector("select").appendChild(option);
+
+                    var row = document.createElement("tr");
+                    var cell = document.createElement("td");
+                    cell.innerHTML = category;
+                    row.appendChild(cell);
+                    document.querySelector("tbody").appendChild(row);
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <h3>Categories List</h3>
+        <ol>
+
+        </ol>
+        <h3>Select Category</h3>
+        <select>
+
+        </select>
+        <h3>Categories Menu</h3>
+        <table border="1" width="200">
+            <thead>
+                <tr>
+                    <th>Products Category</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </body>
+</html>

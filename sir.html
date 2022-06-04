@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+  var str = "JavaScript often abbreviated  is a programming language that is one of the core technologies of the World Wide Web alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior often incorporating third-party libraries";
+  var str2 = str.split(" ");
+  str2.forEach(function (value) {
+    var firstchar = value.charAt(0);
+    var restchar = value.substring(1);
+    var str3 = firstchar.toUpperCase() + restchar.toLowerCase();
+
+    document.write(str3 + " ");
+  });
+</script>
+<body>
+    
+</body>
+</html>

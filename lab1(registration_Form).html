@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab1</title>
+    <style>
+      #main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50%;
+      }
+      #container {
+        width: 400px;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: skyblue;
+      }
+      #items,
+      div,
+      span {
+        margin: 10px 10px 10px 10px;
+        font-weight: bolder;
+        text-align: center;
+        font-size: medium;
+      }
+      body {
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="container" class="container">
+        <div id="items">
+          <marquee
+            behavior=""
+            direction=""
+            onmouseover="this.stop()"
+            onmouseleave="this.start()"
+            >Registration Started Hurruy Up......</marquee
+          >
+          <hr />
+          <h1>Registration Form</h1>
+          <hr />
+          <span style="font-size: large">User Name:</span>
+          <div><input type="text" placeholder="Ener Your Name" /></div>
+          <span style="font-size: large">Password:</span>
+          <div><input type="password" placeholder="Enter Your Password" /></div>
+          <span style="font-size: large">Select Your City</span>
+          <div>
+            <select name="city" id="city">
+              <option value="">City</option>
+              <option value="Hydrabad">Hydrabad</option>
+              <option value="Pune">Pune</option>
+              <option value="Banglore">Banglore</option>
+              <option value="Goa">Goa</option>
+              <option value="Wardha">Wardha</option>
+            </select>
+          </div>
+          <span style="font-size: large">Select Gender:</span>
+          <div>
+            <input type="radio" name="gender" id="" />Male
+            <input type="radio" name="gender" id="" />Female
+          </div>
+          <span style="font-size: large">Enter Your Mobile Number:</span>
+          <div><input type="text" placeholder="Mobile Number" /></div>
+          <span
+            ><input type="submit" /><button style="margin-left: 10px">
+              Cancel
+            </button></span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

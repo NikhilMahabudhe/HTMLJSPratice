@@ -1,0 +1,68 @@
+<DOCTYPE html>
+	<html lang="en">
+		<head>
+			<title>Payment Gateway</title>
+			<script>
+				var carddetails = {
+					cardNumber:"9145504548",
+					cardcvv: "4548",
+					cardexpiry:"2022",
+					cardname:"nikhil"
+				}
+				function getcardnumber(){
+					var card = document.getElementById("card").value;
+					if(card==carddetails.cardNumber){
+						document.getElementById("cvv").disabled=false;
+					}else{
+						document.getElementById("cvv").disabled=true;
+					}
+
+				}
+				function getcvv(){
+					var cvv = document.getElementById("cvv").value;
+					document.getElementById("card").disabled=true;
+					if(cvv==carddetails.cardcvv){
+						document.getElementById("expiry").disabled=false;
+						
+					}else{
+						document.getElementById("expiry").disabled=true;
+					}
+				}
+				function getexpiry(){
+					var expiry =document.getElementById("expiry").value;
+					document.getElementById("cvv").disabled=true;
+					if(expiry==carddetails.cardexpiry){
+						document.getElementById("btn").disabled=false;
+						document.getElementById("expiry").disabled=true;
+					}else{
+						document.getElementById("btn").disabled=true;
+					}
+				}
+				
+				function Pay(){
+					document.Write("Payment Succes...");
+				}
+				
+			</script>
+		</head>
+		<body>
+			<fieldset>
+				<legend>Payment Gateway</legend>
+				<dl>
+					<dt>Enter Card Number</dt>
+					<dd><input type="text" id="card" onkeyup="getcardnumber()"></dd>
+					<dt>Enter Card CVV</dt>
+					<dd><input type="text" id="cvv" disabled onkeyup="getcvv()"></dd>
+					<dt>Enter Card Expiry</dt>
+					<dd><select id="expiry" disabled onchange="getexpiry()">
+						<option value="">2020</option>
+						<option value="">2021</option>
+						<option value="">2022</option>
+						<option value="">2023</option>
+					</select></dd>
+					<dd><button onclick="pay()" disabled id="btn">Pay</button></dd>
+				</dl>
+			</fieldset>
+		</body>
+
+	</html>

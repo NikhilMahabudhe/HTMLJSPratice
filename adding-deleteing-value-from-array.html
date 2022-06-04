@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding and deleting items from array</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var category = [ "All","Electronics","footware",];
+        function Loadcategories(){
+            var lstcategories = document.getElementById("lstcategory");
+               lstcategories.innerHTML="";
+            for (var item of category ){
+               var option = document.createElement("option");
+               option.text=item;
+               lstcategories.appendChild(option);
+
+           }
+
+        }
+        function bodyload(){
+            Loadcategories();
+            categorycount();
+        }
+          function addcategory(){
+             var categoryname = document.getElementById("txtname").value;
+           if(category.indexOf(categoryname)==-1){
+            category.push(categoryname);
+             alert(`${categoryname}  is added in List`);
+             categoryname.value="";
+             Loadcategories();
+             categorycount();
+             
+         }else{
+             alert(`${categoryname} allready Exsist`);
+         }
+           }
+         function categorycount(){
+             document.getElementById("count").innerHTML=category.length;
+              
+         }
+         function removecat(){
+             var x =document.getElementById("lstcategory").value;
+            var categoryindex = category.indexOf(x);
+            var flag =confirm(`Are u sure? \n You want to delete ${x} ?"`)
+            if(flag==true){
+                category.splice(categoryindex,1);
+            alert(`${x} is removed` )
+            Loadcategories();
+            categorycount();
+            }
+
+         }
+           
+        </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <fieldset>
+        <legend>Array manipulation</legend>
+        <div class="row">
+            <div class="col-6">
+                <h3>Add new Category</h3>
+                <div class="input-group">
+                    <input type="text" id="txtname" class="form-control">
+                    <button class="btn btn-primary" onclick="addcategory()">Add</button>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <h3>Category List</h3>
+                <select size="4" class="form-select" id="lstcategory"></select>
+               <div>
+                  <span class="bi bi-cart mt-2 mb-2"></span> <span>Category Count <span id="count" class="badge bg-dark text-light"></span></div></span>
+               
+                <div> <button class="btn btn-danger mt-1" id="remove" onclick="removecat()">
+                <span class="bi bi-trash"></span>Remove Category</button>
+               </div>
+            </div>
+        </div>
+        </div>
+    </fieldset>
+    
+</body>
+</html>

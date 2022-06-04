@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function doitadd(){
+            var x = parseInt(document.getElementById("first").value);
+            var y = parseInt(document.getElementById("second").value);
+            var z = x+y;
+            document.write(z);
+        };
+        function doitsub(){
+            var x = parseInt(document.getElementById("first").value);
+            var y = parseInt(document.getElementById("second").value);
+            var z = x - y;
+            document.write(z);
+        };
+        function doitmultiply(){
+            var x = parseInt(document.getElementById("first").value);
+            var y = parseInt(document.getElementById("second").value);
+            var z = x * y;
+            document.write(z);
+        };
+        function doitdivide(){
+            var x = parseInt(document.getElementById("first").value);
+            var y = parseInt(document.getElementById("second").value);
+            var z = x / y;
+            document.write(z);
+        };
+    </script>
+    <style>
+        #maincontainer{
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <div id="maincontainer">
+    <div>
+        <input type="number" id="first">
+    </div>
+    <br>
+    <div>
+        <input type="number" id="second">
+    </div>
+    <br>
+    <button class="btn bg-success" onclick="doitaddd()">ADD</button>
+    <button   class="btn  bg-success"onclick="doitsub()">Sub</button>
+    <button   class="btn  bg-success"onclick="doitmultiply()">Multiply</button>
+    <button   class="btn  bg-success"onclick="doitdivide()">Divide</button>
+
+  </div>
+    
+</body>
+</html>

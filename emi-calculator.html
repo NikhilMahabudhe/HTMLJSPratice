@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Calculator</title>
+    <link rel="stylesheet" href="..//node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="..//node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script>
+        function getAmount(){
+            document.getElementById("amountShow").value=
+            document.getElementById("amountSlider").value; 
+        }
+        function getYear(){
+            document.getElementById("yearsShow").value=
+            document.getElementById("yearSlider").value;
+        }
+        function getIntrest(){
+            document.getElementById("intrestShow").value=
+            document.getElementById("intrestSlider").value;
+        }
+        function calculate(){
+            var p = document.getElementById("amountSlider").value;
+            var tenor = document.getElementById("yearSlider").value;
+             var n = tenor*12;
+            var r = document.getElementById("intrestSlider").value;
+            var result = document.write((p*r*(1+r)**n)/((1+r)**n-1));
+        }
+            
+    </script>
+    <style>
+        #emi{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr ;
+        }
+        .div{
+           text-align: center;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="emi">
+       <div class="div">
+         <span>Amount You Need </span>
+         <span><input type="text" id="amountShow"></span>
+         <div><input type="range" min="50000" max="4000000" id="amountSlider" style="width: 300px;" onchange="getAmount()"></div>
+        <span style="margin-left: 10px;">₹50,000</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>₹40,00,000</span>
+       
+       </div>
+       <div class="div">
+           <span>For</span>
+           <span><input type="text" id="yearsShow" style="width: 50px;"></span>
+           <span>Years</span>
+           <div><input type="range" min="1" max="5" id="yearSlider" style="width:150px;" onchange="getYear()"></div>
+           <span>1 Year</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>5 Year</span>
+           
+       </div>
+       <div class="div">
+           <span>Intrest Rate</span>
+           <input type="text" id="intrestShow" style="width: 50px;">
+           <span>%</span>
+           <div><input type="range" min="10" max="21" id="intrestSlider" style="width:150px" onchange="getIntrest()"></div>
+           <span>10.5%</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>21%</span>
+       </div>
+   </div>
+   <div style="text-align: center;" class="mt-3"><button onclick="calculate()" class="btn btn-primary">calculate</button></div>
+</body>
+</html>

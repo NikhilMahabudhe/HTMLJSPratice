@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="..//node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <script>
+      function capital(msg) {
+        document.getElementById("show").innerHTML = `${msg}`;
+      }
+    </script>
+    <style>
+      body {
+        background-color: cornflowerblue;
+      }
+      #maincontainer {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+      }
+      select {
+        margin-right: 20px;
+      }
+      #show {
+        margin-top: -866px;
+        margin-left: -45px;
+        font-size: 50px;
+        font-family: italic;
+        font-weight: bold;
+        border: 5px solid blanchedalmond;
+        width: 400px;
+        height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="maincontainer">
+      <div class=".dropdown">
+        <select onchange="capital(this.value)" name="" id="">
+          <option value="Amaravati">Andhra Pradesh</option>
+          <option value="Itanagar">Arunachal Pradesh</option>
+          <option value="Disaour">Assam</option>
+          <option value="Patana">Bihar</option>
+          <option value="Raipur">Chatisgarh</option>
+          <option value="Panji">Goa</option>
+          <option value="Gandhinagar">Gujarat</option>
+          <option value="Chandigarh">Haryana</option>
+          <option value="Shimla">Himachal Pradesh</option>
+          <option value="Ranchi">jharkhand</option>
+          <option value="Bengaluru">Karnatak</option>
+          <option value="Thiruantapuram">Kerala</option>
+          <option value="Bhopal">Madhya Pradesh</option>
+          <option value="Mumbai">Maharastra</option>
+          <option value="Imphal">Manipur</option>
+          <option value="Shillong">Meghalaya</option>
+          <option value="Aizawl">Mezoram</option>
+          <option value="Kohima">Nagaland</option>
+          <option value="Bhubaneswar">Odisha</option>
+          <option value="Chandigarh">Punjab</option>
+          <option value="Jaipur">Rajasthan</option>
+          <option value="Gangtok">Sikkim</option>
+          <option value="Chennai">Tamil Nadu</option>
+          <option value="Hyderabad">Telangana</option>
+          <option value="Agartala">Tirpura</option>
+          <option value="Lucknow">Utar Pradesh</option>
+          <option value="Dehradun (Winter) Gairsain (Summer)">
+            Utarakhand
+          </option>
+          <option value="Kolkata">West Bengal</option>
+        </select>
+      </div>
+    </div>
+    <div id="maincontainer">
+      <div id="show"></div>
+    </div>
+  </body>
+</html>

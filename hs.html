@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <style>
+        #div1{
+            align-content: center;
+            flex-wrap: nowrap;
+            justify-content: center;
+            display: flex;
+            }
+        #span1{
+            float:right;
+            margin-right: 5px;
+            margin-top: 3px;
+            margin-bottom: 5px;
+            }
+        body{
+            background-color:black;
+            }
+        #div2{
+            background-color: black;
+            height: 2px;
+            width: 100%;
+            margin-bottom: 1px;
+            }
+        #dropdown1{
+            list-style: none;
+            display:flex;
+            flex-wrap: nowrap;
+            height: 40px;
+            margin-bottom: 20px;
+             }
+        .div3{
+            background-color: black;
+            height: 2px;
+            width: 100%;
+            margin-top: -18px;
+            }
+        #about{
+            display: grid;
+            grid-template-columns: 6fr 3fr 3fr;
+            }
+        .rev{
+            border: 3px solid black;
+            background-color:  #d7ead7;
+            margin-right: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            }
+        p{
+            padding: 4px;
+            font-weight: bold;
+            }
+        h3{
+            align-content: center;
+            flex-wrap: nowrap;
+            justify-content: center;
+            display: flex;
+
+            }
+        #www{
+                border-bottom: 3px solid black;
+            }
+        #circle{
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+            background-color:#d7ead7;
+
+            }
+        .ss{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            font-weight: bold;
+            border: 1px solid black;
+            margin: 20px;
+            border-radius: 50%;
+            padding: 35px;
+            background-color: #FFFFA7;
+            line-height: 140px;
+            }
+        #container1{
+            border:2px solid black;
+            margin: 20px;
+            border-radius: 5px;
+            background-color:#d7ead7;
+            }
+        #values{
+            border-bottom: 2px solid black;
+            background-color:#d7ead7;
+            }
+        .news{
+                background-color: azure;
+                margin-bottom: 20px;
+                height: 50px;
+                width: 600px;
+                font-weight: bold;
+                border:2px solid black ;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        #doit{
+            display: grid;
+            grid-template-columns: 1fr 5fr 5fr 1fr;
+            background-color: peachpuff;
+
+            }
+        .button{
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .container3{
+          position: relative;
+        }
+        #btn123{
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+            color: white;
+             font-size: 16px;
+             padding: 10px 10px;
+            }
+        .container3:hover{
+                opacity: 0.8;
+                cursor:grab;
+            }
+        #search{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+            height: 200px;
+            width: 100%;
+            background-color: black;
+            border: 2px solid white;
+        }
+        </style>
+        <script>
+            function nikhil(){
+                var x = document.getElementById("location").value;
+                 var error =document.getElementById("error");
+                 if(x.length<5){
+                     error.innerHTML="please Enter minimum 4 character".fontcolor("red");
+                 }else{
+                     error.innerHTML="location is Perfect".fontcolor("green");
+                     }
+                 }
+                 function Changecase(){
+                 var username = document.getElementById("location").value;
+                 document.getElementById("location").value = username.toUpperCase();
+        }
+        </script>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    </head>
+<body class="container-fluid " style="background-color:skyblue;" >
+    <div id="div1"><span><h1>Manna</h1></span><span><h1 style="color: lightgreen;">360</h1></span></div><div id="div2"></div> <span id="span1"><button class="bi bi-person btn-primary btn-sm rounded-pill btn-outline-dark text-white ">Login/Register</button>&nbsp;&nbsp;<button class="bi bi-bag btn-primary rounded-pill btn-sm btn-outline-dark text-white">My Bag</button></span>
+   <div id="container" class="bg bg-success"><span><ol id="dropdown1">
+       <li><button class="btn btn-success me-2 mb-2 ">About Us</button></li>
+       <li><div id="dropdown">
+           <button class="btn bg-success dropdown-toggle me-2 text-white " data-bs-toggle="dropdown">Brands</button>
+           <ul class="dropdown-menu bg-success">
+               <li class="dropdown-item bg-success">TEA</li>
+               <li class="dropdown-item bg-success">COFFE</li>
+               <li class="dropdown-item bg-success ">COLD COFFE</li>
+               <li class="dropdown-item bg-success ">WATER</li>
+               <li class="dropdown-item bg-success ">SODA</li>
+           </ul>
+       </div></li>
+       <li><button class="btn btn-success me-2 mb-2">Contact Us</button></li>
+       <li><button class="btn btn-success me-2 mb-2">Order</button></li>
+        <li><button class="btn btn-success me-2 mb-2">Ocassion</button></li>
+   </ol></span></div>
+   <div class="div3"></div>
+    <div class="carousel slide carousel-dark" id="topbanner" data-bs-ride="carousel" >
+     <div class="carousel-inner"data-bs-ride="carousel">
+        <div class="carousel-item active" data-bs-interval="4000">
+           <img src="../public/images/carousel1.png" alt="">
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+            <img src="../public/images/carousel2.png" alt="">
+         </div>
+         <div class="carousel-item" data-bs-interval="4000">
+            <img src="../public/images/carousel3.png" alt="">
+         </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#topbanner" >
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#topbanner" >
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+            <button class="active" data-bs-target="#topbanner" data-bs-slide-to="0"></button>
+            <button data-bs-slide-to="1" data-bs-target="#topbanner"></button>
+            <button data-bs-slide-to="2" data-bs-target="#topbanner"></button>
+        </div>
+    </div>
+   </div>
+   <div id="about">
+       <div class="rev"><div id="www"><h3>About The Founder</h3></div>
+
+        <p>Your use of this software is subject to the terms and conditions of the license agreement by which you acquired this software.  If you are a volume license customer, use of this software is subject to your volume license agreement.  You may not use this software if you have not validly acquired a license for the software from Microsoft or its licensed distributors.</p>
+       </div>
+       <div class="rev"><div id="www"><h3>Vision</h3></div><p>Your use of this software is subject to the terms and conditions of the license agreement by which you acquired this software.  I</p>
+       </div>
+       <div class="rev"><div id="www"><h3>Mission</h3></div><p>Your use of this software is subject to the terms and conditions of the license agreement by which you acquired this software.</p>
+       </div>
+    </div>
+    <div id="container1">
+        <h3 id="values">Values</h3>
+        <h3 class="m-2 mt-2">Your use of this softwareby which you acquired this software. for the software from Microsoft or its licensed distributors.</h3>
+      <div id="circle">
+        <div class="ss">Excellance</div>
+        <div class="ss">Integrety</div>
+        <div class="ss">Trust</div>
+        <div class="ss">Respect</div>
+        <div class="ss">Teamwork</div>
+        <div class="ss">Meritocrocy</div>
+      </div>
+    </div>
+    <div style="background-color: peachpuff; border:2px solid black;">
+        <span style="font-weight:bold; margin-left:125px; margin-bottom:50px;">News</span>
+     <div id="doit">
+        <div></div>
+        <div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden</div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden </div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden</div>
+        </div>
+        <div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden </div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden </div>
+        <div class="news"><span  class="bi bi-arrow-down-circle-fill me-2 ms-2"></span>Krisy keema flagship store open and awards conveted golden </div>
+        </div>
+        <div></div>
+    </div>
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <div>
+         <div  class="container3">
+            <div style="text-align: center;" id="btn123">
+              <div style="font-weight: bold;">Creapsy Cream outlet</div>
+              <button class="btn btn-success m-2">locate us</button>
+            </div>
+            <div>
+                <img src="../public/images/img1.jpeg" alt="" height="300px" width="300px">
+            </div>
+         </div>
+      </div>
+      <div>
+        <div class="container3">
+           <div style="text-align:center;" id="btn123">
+             <div style="font-weight: bold;" >Creapsy Cream outlet</div>
+             <button class="btn btn-success m-2" >locate us</button>
+           </div>
+           <div>
+               <img src="../public/images/img2.jpeg" alt="" height="300px" width="300px">
+           </div>
+        </div>
+     </div>
+     <div>
+        <div class="container3" >
+           <div style="text-align: center;" id="btn123">
+             <div style="font-weight: bold;" >Creapsy Cream outlet</div>
+             <button class="btn btn-success m-2">locate us</button>
+           </div>
+           <div>
+               <img src="../public/images/img3.jpeg" alt="" height="300px" width="300px">
+           </div>
+        </div>
+     </div>
+     <div>
+        <div  class="container3">
+           <div style="text-align: center;" id="btn123">
+             <div style="font-weight: bold;">Creapsy Cream outlet</div>
+             <button class="btn btn-success m-2">locate us</button>
+        </div>
+           <div>
+               <img src="../public/images/img4.jpeg" alt="" height="300px" width="300px">
+           </div>
+        </div>
+     </div>
+    </div>
+    <div id="search">
+         <div style="width: 500px; height: 50px;" class="btn btn-group"><input class="form-control" onkeyup="nikhil()" id="location" onkeypress="changecase()"><span class="btn  btn-primary" style="width: 200px;"><span class="bi bi-person"><span class="ms-2">Sign In</span></span></span></div><div id="error"></div>
+    </div>
+    <footer style="background-color: whitesmoke;">
+        <div style="display: grid; grid-template-columns: 2fr 2fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr;">
+        <div>
+    <div id="div1"><span><h1>Manna</h1></span><span><h1 style="color: lightgreen;">360</h1></span></div>
+        <span class="bi bi-facebook me-2 ms-5"></span> <span class="bi bi-instagram me-2"></span><span class="bi bi-linkdin me-2"></span><span class="bi bi-youtube me-2"></span> <span class="bi-twitter "></span>
+    </div>
+    <div><span style="font-weight: bold;">Manna360 PVT LTD</span>
+        <div>snehal nagar sewargram road wardha 442001</div>
+         <div>niksmahabudhe@gmail.com</div>
+    </div>
+        <div> <span style="font-weight: bold;">Company</span>
+        <div>About Us</div>
+        <div>Contact us</div>
+        <div>Location</div>
+        <div>Careears</div></div>
+    <div><span style="font-weight: bold;">Customer Service</span>
+        <div>FAQ</div>
+        <div>Delivery info</div>
+        <div>Privacy Policy</div>
+         <div>Terms and Conditions</div>
+    </div>
+    <div><span style="font-weight: bold;">Online Shoping</span>
+        <div>LogIn/Register</div>
+        <div>My Account</div>
+        <div>My Orders</div>
+         <div>My Wishlist</div>
+    </div>
+    <div><span style="font-weight: bold;">Online Shoping</span>
+            <div>LogIn/Register</div>
+            <div>My Account</div>
+            <div>My Orders</div>
+             <div>My Wishlist</div>
+    </div>
+    <div><span style="font-weight: bold;">Company</span>
+            <div>About Us</div>
+            <div>Contact us</div>
+            <div>Location</div>
+            <div>Careears</div>
+    </div>
+    </footer>
+    <footer style="border: 5px solid black;">
+        <div style="font-weight: bold;">copyright&copy;
+           <span style="float: right;">We Accept <span class="bi bi-paypal"></span></div></span>
+    </footer>
+   <script src="../node_modules/jquery/dist/jquery.js"></script>
+   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

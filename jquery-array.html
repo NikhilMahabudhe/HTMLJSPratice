@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jquery</title>
+    <script src="..//node_modules/jquery/dist/jquery.js"></script>
+    <script>
+      $(function () {
+        var categories = ["all", "Electronic", "footwear"];
+        $("#btninsert").click(function getlist(event) {
+          $.each(categories, function (key, value) {
+            $(`<li>[${key}]-${value}</li>`).appendTo("ol");
+          });
+        });
+        $("button").click(function () {
+          var x = document.getElementById("input").value;
+          categories.pop(x);
+          $.each(categories, function (key, value) {
+            $(`<li>[${key}]-${value}</li>`).appendTo("ol");
+          });
+        });
+      });
+    </script>
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btninsert">Insert</button>
+    <ol id="list"></ol>
+    <input id="input" type="text" />
+    <button id="submit">submit</button>
+  </body>
+</html>
